@@ -55,6 +55,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KWNH2CMB');</script>
 <!-- End Google Tag Manager -->
+
+ <script>
+        function enviarFormulario(event) {
+            event.preventDefault(); // Evita el envío tradicional
+            // Aquí puedes hacer validaciones si es necesario antes de redirigir
+            window.location.href = 'thankyou.html'; // Redirige a la página de agradecimiento
+        }
+    </script>
    </head>
    <!-- body -->
    <body class="main-layout in_page">
@@ -129,7 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="row">
                <div class="col-md-6">
-                  <form id="request" class="main_form" action="thankyou.html" method="post">
+                  <form id="request" class="main_form" onsubmit="enviarFormulario(event)" >
                      <div class="row">
                         <div class="col-md-12 ">
                            <input class="contactus" placeholder="Name" type="type" name="Name"> 
